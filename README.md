@@ -2,6 +2,8 @@
 
 Amazing is an intelligent AI assistant powered by OpenAI ChatKit, built with Next.js and designed for easy deployment to Vercel.
 
+🚀 **Live at**: https://agents-thesis-lara-hft-v1-sepia.vercel.app
+
 ## Features
 
 - 🤖 Intelligent AI conversations powered by OpenAI ChatKit
