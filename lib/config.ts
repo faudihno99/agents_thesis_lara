@@ -9,17 +9,17 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "What can you do?",
     prompt: "What can you do?",
-    icon: "circle-question",
+    icon: "help-circle",
   },
   {
     label: "Tell me about Amazing",
     prompt: "Tell me about Amazing and what makes it special",
-    icon: "sparkle",
+    icon: "star",
   },
   {
     label: "Help me get started",
     prompt: "Help me get started with using Amazing",
-    icon: "play",
+    icon: "arrow-right",
   },
 ];
 
