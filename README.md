@@ -1,71 +1,130 @@
-# ChatKit Starter Template
+# Amazing - AI Assistant
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![NextJS](https://img.shields.io/badge/Built_with-NextJS-blue)
-![OpenAI API](https://img.shields.io/badge/Powered_by-OpenAI_API-orange)
+Amazing is an intelligent AI assistant powered by OpenAI ChatKit, built with Next.js and designed for easy deployment to Vercel.
 
-This repository is the simplest way to bootstrap a [ChatKit](http://openai.github.io/chatkit-js/) application. It ships with a minimal Next.js UI, the ChatKit web component, and a ready-to-use session endpoint so you can experiment with OpenAI-hosted workflows built using [Agent Builder](https://platform.openai.com/agent-builder).
+## Features
 
-## What You Get
+- 🤖 Intelligent AI conversations powered by OpenAI ChatKit
+- 🎨 Beautiful, responsive UI with dark/light theme support
+- 📁 File upload support for enhanced interactions
+- 🔄 Real-time streaming responses
+- 📱 Mobile-friendly design
+- ⚡ Edge runtime for optimal performance
 
-- Next.js app with `<openai-chatkit>` web component and theming controls
-- API endpoint for creating a session at [`app/api/create-session/route.ts`](app/api/create-session/route.ts)
-- Config file for starter prompts, theme, placeholder text, and greeting message
+## Quick Start
 
-## Getting Started
+### Prerequisites
 
-### 1. Install dependencies
+- Node.js 18+ 
+- OpenAI API key
+- ChatKit workflow ID
 
+### Local Development
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd amazing
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-### 2. Create your environment file
-
-Copy the example file and fill in the required values:
-
+3. Create environment file:
 ```bash
-cp .env.example .env.local
+cp env.example .env.local
 ```
 
-You can get your workflow id from the [Agent Builder](https://platform.openai.com/agent-builder) interface, after clicking "Publish":
+4. Configure environment variables in `.env.local`:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+NEXT_PUBLIC_CHATKIT_WORKFLOW_ID=wf_your_workflow_id_here
+```
 
-<img src="./public/docs/workflow.jpg" width=500 />
-
-You can get your OpenAI API key from the [OpenAI API Keys](https://platform.openai.com/api-keys) page.
-
-### 3. Configure ChatKit credentials
-
-Update `.env.local` with the variables that match your setup.
-
-- `OPENAI_API_KEY` — This must be an API key created **within the same org & project as your Agent Builder**. If you already have a different `OPENAI_API_KEY` env variable set in your terminal session, that one will take precedence over the key in `.env.local` one (this is how a Next.js app works). So, **please run `unset OPENAI_API_KEY` (`set OPENAI_API_KEY=` for Windows OS) beforehand**.
-- `NEXT_PUBLIC_CHATKIT_WORKFLOW_ID` — This is the ID of the workflow you created in [Agent Builder](https://platform.openai.com/agent-builder), which starts with `wf_...`
-- (optional) `CHATKIT_API_BASE` - This is a customizable base URL for the ChatKit API endpoint
-
-> Note: if your workflow is using a model requiring organization verification, such as GPT-5, make sure you verify your organization first. Visit your [organization settings](https://platform.openai.com/settings/organization/general) and click on "Verify Organization".
-
-### 4. Run the app
-
+5. Start the development server:
 ```bash
 npm run dev
 ```
 
-Visit `http://localhost:3000` and start chatting. Use the prompts on the start screen to verify your workflow connection, then customize the UI or prompt list in [`lib/config.ts`](lib/config.ts) and [`components/ChatKitPanel.tsx`](components/ChatKitPanel.tsx).
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 5. Deploy your app
+## Vercel Deployment
 
+### Method 1: Deploy with Vercel CLI
+
+1. Install Vercel CLI:
 ```bash
-npm run build
+npm i -g vercel
 ```
 
-Before deploying your app, you need to verify the domain by adding it to the [Domain allowlist](https://platform.openai.com/settings/organization/security/domain-allowlist) on your dashboard.
+2. Login to Vercel:
+```bash
+vercel login
+```
 
-## Customization Tips
+3. Deploy:
+```bash
+vercel
+```
 
-- Adjust starter prompts, greeting text, [chatkit theme](https://chatkit.studio/playground), and placeholder copy in [`lib/config.ts`](lib/config.ts).
-- Update the event handlers inside [`components/.tsx`](components/ChatKitPanel.tsx) to integrate with your product analytics or storage.
+4. Set environment variables in Vercel dashboard:
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `NEXT_PUBLIC_CHATKIT_WORKFLOW_ID`: Your ChatKit workflow ID
 
-## References
+### Method 2: Deploy via Vercel Dashboard
 
-- [ChatKit JavaScript Library](http://openai.github.io/chatkit-js/)
-- [Advanced Self-Hosting Examples](https://github.com/openai/openai-chatkit-advanced-samples)
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Connect your repository to Vercel
+3. Set environment variables in project settings:
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `NEXT_PUBLIC_CHATKIT_WORKFLOW_ID`: Your ChatKit workflow ID
+4. Deploy!
+
+## Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `OPENAI_API_KEY` | Your OpenAI API key | Yes |
+| `NEXT_PUBLIC_CHATKIT_WORKFLOW_ID` | ChatKit workflow ID (starts with `wf_`) | Yes |
+| `CHATKIT_API_BASE` | Custom ChatKit API base URL (optional) | No |
+
+## Getting Your ChatKit Workflow ID
+
+1. Go to [OpenAI Platform](https://platform.openai.com)
+2. Navigate to ChatKit section
+3. Create a new workflow or use an existing one
+4. Copy the workflow ID (starts with `wf_`)
+
+## Customization
+
+### Branding
+- Update the greeting message in `lib/config.ts`
+- Modify starter prompts in `lib/config.ts`
+- Change the page title in `app/layout.tsx`
+
+### Styling
+- Customize themes in `lib/config.ts`
+- Modify global styles in `app/globals.css`
+- Update component styles in `components/`
+
+## Tech Stack
+
+- **Framework**: Next.js 15
+- **UI Library**: React 19
+- **AI Integration**: OpenAI ChatKit
+- **Styling**: Tailwind CSS
+- **TypeScript**: Full type safety
+- **Deployment**: Vercel (optimized)
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Support
+
+For issues and questions:
+- Check the [OpenAI ChatKit documentation](https://platform.openai.com/docs/guides/chatkit)
+- Review the [Next.js documentation](https://nextjs.org/docs)
+- Open an issue in this repository

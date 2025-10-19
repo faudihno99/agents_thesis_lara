@@ -1,12 +1,17 @@
 {
-  "name": "openai-chatkit-starter-app",
+  "name": "amazing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "vercel-build": "next build",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
+    "deploy:windows": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1"
   },
   "dependencies": {
     "@openai/chatkit-react": ">=1.1.1 <2.0.0",

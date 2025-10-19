@@ -11,11 +11,21 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
     prompt: "What can you do?",
     icon: "circle-question",
   },
+  {
+    label: "Tell me about Amazing",
+    prompt: "Tell me about Amazing and what makes it special",
+    icon: "sparkles",
+  },
+  {
+    label: "Help me get started",
+    prompt: "Help me get started with using Amazing",
+    icon: "play",
+  },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT = "Ask Amazing anything...";
 
-export const GREETING = "How can I help you today?";
+export const GREETING = "Hello! I'm Amazing, your AI assistant. How can I help you today?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
