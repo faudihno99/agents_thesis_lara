@@ -14,7 +14,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
     label: "Tell me about Amazing",
     prompt: "Tell me about Amazing and what makes it special",
-    icon: "sparkles",
+    icon: "sparkle",
   },
   {
     label: "Help me get started",
