@@ -14,7 +14,7 @@ export const STARTER_PROMPTS: StartScreenPrompt[] = [
 
 export const PLACEHOLDER_INPUT = "Fragen Sie den Recruiting Agent...";
 
-export const GREETING = "Hallo! Ich bin der Recruiting Agent. Wie kann ich Ihnen heute helfen?";
+export const GREETING = "Hallo! Ich bin Ihr Recruiting Agent. Wie kann ich Ihnen heute helfen?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
