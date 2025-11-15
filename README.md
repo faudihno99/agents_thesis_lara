@@ -1,17 +1,17 @@
-# Amazing - AI Assistant
+# Recruiting Agent
 
-Amazing is an intelligent AI assistant powered by OpenAI ChatKit, built with Next.js and designed for easy deployment to Vercel.
+Der Recruiting Agent ist ein intelligenter KI-Assistent für Recruiting, powered by OpenAI ChatKit, entwickelt mit Next.js und optimiert für Vercel Deployment.
 
 🚀 **Live at**: https://agents-thesis-lara-hft-v1-sepia.vercel.app
 
 ## Features
 
-- 🤖 Intelligent AI conversations powered by OpenAI ChatKit
-- 🎨 Beautiful, responsive UI with dark/light theme support
-- 📁 File upload support for enhanced interactions
-- 🔄 Real-time streaming responses
-- 📱 Mobile-friendly design
-- ⚡ Edge runtime for optimal performance
+- 🤖 Intelligente KI-Konversationen powered by OpenAI ChatKit
+- 🎨 Schöne, responsive UI mit Dark/Light Theme Unterstützung
+- 📁 Datei-Upload für verbesserte Interaktionen
+- 🔄 Echtzeit-Streaming Antworten
+- 📱 Mobile-freundliches Design
+- ⚡ Edge Runtime für optimale Performance
 
 ## Quick Start
 
@@ -23,10 +23,10 @@ Amazing is an intelligent AI assistant powered by OpenAI ChatKit, built with Nex
 
 ### Local Development
 
-1. Clone the repository:
+1. Repository klonen:
 ```bash
 git clone <your-repo-url>
-cd amazing
+cd recruiting-agent
 ```
 
 2. Install dependencies:

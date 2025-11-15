@@ -7,14 +7,14 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "Start the process.",
-    prompt: "Start the process.",
+    label: "Prozess starten",
+    prompt: "Prozess starten",
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask Amazing anything...";
+export const PLACEHOLDER_INPUT = "Fragen Sie den Recruiting Agent...";
 
-export const GREETING = "Hello! I'm Amazing, your AI assistant. How can I help you today?";
+export const GREETING = "Hallo! Ich bin der Recruiting Agent. Wie kann ich Ihnen heute helfen?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {

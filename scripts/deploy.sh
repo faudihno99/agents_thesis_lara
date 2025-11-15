@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Amazing AI Assistant - Vercel Deployment Script
+# Recruiting Agent - Vercel Deployment Script
 
-echo "🚀 Deploying Amazing AI Assistant to Vercel..."
+echo "🚀 Deploying Recruiting Agent to Vercel..."
 
 # Check if Vercel CLI is installed
 if ! command -v vercel &> /dev/null; then

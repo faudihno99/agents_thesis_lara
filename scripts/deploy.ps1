@@ -1,6 +1,6 @@
-# Amazing AI Assistant - Vercel Deployment Script (PowerShell)
+# Recruiting Agent - Vercel Deployment Script (PowerShell)
 
-Write-Host "🚀 Deploying Amazing AI Assistant to Vercel..." -ForegroundColor Green
+Write-Host "🚀 Deploying Recruiting Agent to Vercel..." -ForegroundColor Green
 
 # Check if Vercel CLI is installed
 try {

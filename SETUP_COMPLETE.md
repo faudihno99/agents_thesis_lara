@@ -1,15 +1,15 @@
-# Amazing AI Assistant - Setup Complete! 🎉
+# Recruiting Agent - Setup Abgeschlossen! 🎉
 
-Your ChatKit application has been successfully configured for Vercel deployment and rebranded as "Amazing".
+Ihre ChatKit Anwendung wurde erfolgreich für Vercel Deployment konfiguriert und als "Recruiting Agent" gebrandet.
 
-## What's Been Done
+## Was wurde gemacht
 
 ### ✅ Branding Updates
-- **App Name**: Changed from "openai-chatkit-starter-app" to "amazing"
-- **Page Title**: Updated to "Amazing - AI Assistant"
-- **Greeting**: Changed to "Hello! I'm Amazing, your AI assistant. How can I help you today?"
-- **Placeholder**: Updated to "Ask Amazing anything..."
-- **Starter Prompts**: Added Amazing-specific prompts including "Tell me about Amazing"
+- **App Name**: Von "openai-chatkit-starter-app" zu "recruiting-agent" geändert
+- **Page Title**: Zu "Recruiting Agent" aktualisiert
+- **Begrüßung**: Zu "Hallo! Ich bin der Recruiting Agent, Ihr KI-Assistent für Recruiting. Wie kann ich Ihnen heute helfen?" geändert
+- **Platzhalter**: Zu "Fragen Sie den Recruiting Agent..." aktualisiert
+- **Starter Prompts**: Recruiting Agent-spezifische Prompts hinzugefügt
 
 ### ✅ Vercel Deployment Configuration
 - **vercel.json**: Created with proper framework and function configuration
@@ -27,9 +27,9 @@ Your ChatKit application has been successfully configured for Vercel deployment 
 - **Bash Script**: `scripts/deploy.sh` for Unix/Linux users
 - **NPM Scripts**: Added deployment commands to package.json
 
-### ✅ Project Structure
+### ✅ Projektstruktur
 ```
-amazing/
+recruiting-agent/
 ├── app/
 │   ├── api/
 │   │   ├── create-session/route.ts
@@ -65,7 +65,7 @@ NEXT_PUBLIC_CHATKIT_WORKFLOW_ID=wf_your_workflow_id_here
 ```bash
 npm run dev
 ```
-Visit http://localhost:3000 to test your Amazing AI assistant.
+Besuchen Sie http://localhost:3000 um Ihren Recruiting Agent zu testen.
 
 ### 3. Deploy to Vercel
 
@@ -108,10 +108,10 @@ In your Vercel project dashboard, add:
 - **Vercel**: [Deployment Guide](https://vercel.com/docs)
 - **Issues**: Open an issue in this repository
 
-## Ready to Deploy! 🚀
+## Bereit für Deployment! 🚀
 
-Your Amazing AI assistant is now ready for deployment to Vercel. Follow the deployment steps above to get it live!
+Ihr Recruiting Agent ist jetzt bereit für das Deployment auf Vercel. Folgen Sie den obigen Deployment-Schritten um ihn live zu schalten!
 
 ---
 
-*Happy coding with Amazing!* ✨
+*Viel Erfolg mit dem Recruiting Agent!* ✨

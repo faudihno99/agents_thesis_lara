@@ -1,6 +1,6 @@
-# Vercel Deployment Guide for Amazing
+# Vercel Deployment Guide für Recruiting Agent
 
-This guide will help you deploy the Amazing AI assistant to Vercel.
+Dieser Guide hilft Ihnen beim Deployment des Recruiting Agent auf Vercel.
 
 ## Prerequisites
 
@@ -35,9 +35,9 @@ npm i -g vercel
 vercel login
 ```
 
-3. Navigate to your project directory:
+3. Navigieren Sie zu Ihrem Projektverzeichnis:
 ```bash
-cd amazing
+cd recruiting-agent
 ```
 
 4. Deploy:
@@ -72,9 +72,9 @@ After adding environment variables:
 
 ## Step 5: Test Your Deployment
 
-1. Visit your deployed URL (e.g., `https://amazing-xyz.vercel.app`)
-2. You should see the Amazing AI assistant interface
-3. Try asking a question to test the functionality
+1. Besuchen Sie Ihre deployed URL (z.B., `https://recruiting-agent-xyz.vercel.app`)
+2. Sie sollten die Recruiting Agent Oberfläche sehen
+3. Stellen Sie eine Frage um die Funktionalität zu testen
 
 ## Troubleshooting
 
@@ -127,4 +127,4 @@ Vercel provides built-in monitoring:
 - Error tracking
 - Analytics (if enabled)
 
-Your Amazing AI assistant is now live! 🚀
+Ihr Recruiting Agent ist jetzt live! 🚀

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Amazing - AI Assistant",
-  description: "Meet Amazing, your intelligent AI assistant powered by OpenAI ChatKit",
+  title: "Recruiting Agent",
+  description: "Treffen Sie den Recruiting Agent, Ihren intelligenten KI-Assistenten für Recruiting",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <Script
           src="https://cdn.platform.openai.com/deployments/chatkit/chatkit.js"
