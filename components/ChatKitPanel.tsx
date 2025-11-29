@@ -21,6 +21,7 @@ export type FactAction = {
 
 type ChatKitPanelProps = {
   theme: ColorScheme;
+  respondentId: string | null;
   onWidgetAction: (action: FactAction) => Promise<void>;
   onResponseEnd: () => void;
   onThemeRequest: (scheme: ColorScheme) => void;
@@ -45,6 +46,7 @@ const createInitialErrors = (): ErrorState => ({
 
 export function ChatKitPanel({
   theme,
+  respondentId,
   onWidgetAction,
   onResponseEnd,
   onThemeRequest,
@@ -192,6 +194,7 @@ export function ChatKitPanel({
           },
           body: JSON.stringify({
             workflow: { id: WORKFLOW_ID },
+            scope: respondentId ? { user_id: respondentId } : undefined,
             chatkit_configuration: {
               // enable attachments
               file_upload: {
@@ -258,7 +261,7 @@ export function ChatKitPanel({
         }
       }
     },
-    [isWorkflowConfigured, setErrorState]
+    [isWorkflowConfigured, respondentId, setErrorState]
   );
 
   const chatkit = useChatKit({

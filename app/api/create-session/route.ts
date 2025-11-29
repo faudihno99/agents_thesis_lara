@@ -38,7 +38,7 @@ export async function POST(request: Request): Promise<Response> {
 
     const parsedBody = await safeParseJson<CreateSessionRequestBody>(request);
     const { userId, sessionCookie: resolvedSessionCookie } =
-      await resolveUserId(request);
+      await resolveUserId(request, parsedBody);
     sessionCookie = resolvedSessionCookie;
     const resolvedWorkflowId =
       parsedBody?.workflow?.id ?? parsedBody?.workflowId ?? WORKFLOW_ID;
@@ -146,10 +146,23 @@ function methodNotAllowedResponse(): Response {
   });
 }
 
-async function resolveUserId(request: Request): Promise<{
+async function resolveUserId(
+  request: Request,
+  parsedBody: CreateSessionRequestBody | null
+): Promise<{
   userId: string;
   sessionCookie: string | null;
 }> {
+  // First priority: user_id from request body scope
+  const providedUserId = parsedBody?.scope?.user_id;
+  if (providedUserId) {
+    if (process.env.NODE_ENV !== "production") {
+      console.info("[resolveUserId] Using provided user_id:", providedUserId);
+    }
+    return { userId: providedUserId, sessionCookie: null };
+  }
+
+  // Second priority: existing cookie
   const existing = getCookieValue(
     request.headers.get("cookie"),
     SESSION_COOKIE_NAME
@@ -158,6 +171,7 @@ async function resolveUserId(request: Request): Promise<{
     return { userId: existing, sessionCookie: null };
   }
 
+  // Third priority: generate new ID and set cookie
   const generated =
     typeof crypto.randomUUID === "function"
       ? crypto.randomUUID()
