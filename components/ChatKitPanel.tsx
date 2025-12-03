@@ -164,6 +164,7 @@ export function ChatKitPanel({
       if (isDev) {
         console.info("[ChatKitPanel] getClientSecret invoked", {
           currentSecretPresent: Boolean(currentSecret),
+          forcingNewSession: true, // Immer neue Session für neuen Thread
           workflowId: WORKFLOW_ID,
           endpoint: CREATE_SESSION_ENDPOINT,
         });
@@ -180,9 +181,8 @@ export function ChatKitPanel({
       }
 
       if (isMountedRef.current) {
-        if (!currentSecret) {
-          setIsInitializingSession(true);
-        }
+        // Immer als neue Session behandeln, um einen neuen Thread zu starten
+        setIsInitializingSession(true);
         setErrorState({ session: null, integration: null, retryable: false });
       }
 
@@ -194,6 +194,8 @@ export function ChatKitPanel({
           },
           body: JSON.stringify({
             workflow: { id: WORKFLOW_ID },
+            // Verwende die reine respondentId für Tracking im Agent Builder
+            // Jeder Seitenaufruf erstellt eine neue Session/Thread für diesen User
             scope: respondentId ? { user_id: respondentId } : undefined,
             chatkit_configuration: {
               // enable attachments
